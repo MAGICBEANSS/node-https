@@ -29,6 +29,10 @@ const app: Application = express();
 
 app.use(bodyParser.json());
 
+app.get('/', (req,res)=>{
+    res.status(200).jsonp({"msg":"hello HTTPS"})
+});
+
 
 // REST API
 app.route('/api/lessons')
